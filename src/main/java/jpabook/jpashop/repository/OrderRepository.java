@@ -18,6 +18,6 @@ public class OrderRepository {
     public Order findOne(Long id) {
         return em.find(Order.class, id);
     }
-    
+
 // public List<Order> findAll(OrderSearch orderSearch) { ... }
 }
