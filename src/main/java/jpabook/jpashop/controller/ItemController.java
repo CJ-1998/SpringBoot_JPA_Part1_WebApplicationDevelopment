@@ -32,4 +32,14 @@ public class ItemController {
         itemService.saveItem(book);
         return "redirect:/items";
     }
+
+    /**
+     * 상품 목록
+     */
+    @GetMapping(value = "/items")
+    public String list(Model model) {
+        List<Item> items = itemService.findItems();
+        model.addAttribute("items", items);
+        return "items/itemList";
+    }
 }
